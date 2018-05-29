@@ -14,57 +14,64 @@
 </head>
 
 <body ng-controller="IndexController">
+    <h2 class="col-sm-7">Search Wheels</h2>
     <div class="form-group">
         <div class="col-sm-7">
-            <h2>Search Wheels</h2>
             <form>
                 <div class="row">
                     <div class="form-group col-sm-4">
-                        <select>
+                        <select class="form-control">
                             <option>Estado</option>
                         </select>
                     </div>
                 </div>
                 <div class="row">
                     <div class="form-group col-sm-4">
-                        <select>
+                        <select class="form-control">
                             <option>Cidade</option>
                         </select>
                     </div>
                 </div>
                 <div class="row">
                         <div class="form-group col-sm-4">
-                            <select>
+                            <select class="form-control" ng-change="selectBrand" ng-model="" ng-options="">
                                 <option>Marca</option>
                             </select>
                         </div>
                 </div>
                 <div class="row">
                         <div class="form-group col-sm-4">
-                            <select>
+                            <select class="form-control">
                                 <option>Tipo</option>
                             </select>
                         </div>
                 </div>
                 <div class="row">
                         <div class="form-group col-sm-4">
-                            <select>
+                            <select class="form-control">
                                 <option>Condição</option>
                             </select>
                         </div>
                 </div>
                 <div class="row">
                         <div class="form-group col-sm-4">
-                            <select>
+                            <select class="form-control">
                                 <option>Diâmetro</option>
                             </select>
                         </div>
                 </div>
-                <div>
-
+                <div class="row">
+                    <div class="form-group col-sm-4">
+                        <select class="form-control">
+                            <option>Preço Min</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-sm-4">
+                        <select class="form-control">
+                            <option>Preço Max</option>
+                        </select>
+                    </div>
                 </div>
-                    
-
             </form>
         </div>
 
