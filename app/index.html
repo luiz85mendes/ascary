@@ -14,17 +14,34 @@
 </head>
 
 <body ng-controller="IndexController">
-    <nav class="navbar navbar-dark bg-dark">
-        <form class="form-inline">
-            <div class="form-group col-sm-6">
-                    <input class="form-control form-control-sm">
+       
+<div>  
+    <nav class="navbar navbar-dark bg-dark">  
+            
+        <div class="row col-sm-5 offset-sm-7">
+            <div class="form-group col-sm-4">
+                <input placeholder="Login">
             </div>
-        </form>
-    </nav>
-    <h2 class="col-sm-7">Search Wheels</h2>
+            <div class="form-group col-sm-5">
+                <input placeholder="Senha">
+            </div>
+            <div>
+                <button type="submit" class="btn btn-default">Login</button>
+            </div>
+        </div>
+       
+    </nav>  
+    
+   
     <div class="form-group">
-        <div class="col-sm-7">
+        <div class="col-sm-7 offset-sm-8">
             <form>
+                    <h6 class="col-sm-7">Pesquisar JogoDeRodas</h6>
+                <div class="row">
+                    <div class="form-group col-sm-4">
+                        <input class="form-control form-control-sm" placeholder="Palavra-chave">
+                    </div>
+                </div>    
                 <div class="row">
                     <div class="form-group col-sm-4">
                         <select class="form-control form-control-sm">
@@ -68,12 +85,12 @@
                         </div>
                 </div>
                 <div class="row">
-                    <div class="form-group col-sm-4">
+                    <div class="form-group col-sm-2">
                         <select class="form-control form-control-sm">
                             <option>Preço Min</option>
                         </select>
                     </div>
-                    <div class="form-group col-sm-4">
+                    <div class="form-group col-sm-2">
                         <select class="form-control form-control-sm">
                             <option>Preço Max</option>
                         </select>
@@ -83,7 +100,7 @@
         </div>
 
     </div>
-
+</div>
 </body>
 
 </html>
