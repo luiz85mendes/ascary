@@ -11,7 +11,7 @@
 
   
     angular.module('app').controller('WheelsController', ['$scope', 'WheelsService', function($scope, wheelsService) {
-
+        $scope.titulo = "Teste2";
     }]);
     
 })();

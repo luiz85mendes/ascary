@@ -1,11 +1,15 @@
 (function() {
+  
   'use strict';
 
-  angular.module("app", []).controller("IndexController", function($scope) {
-    $scope.titulo = "Teste2";
+  angular.module('app',[]);
 
+  angular.module('app').run(['$rootScope', function($rootScope) {
 
-  });
+    require('wheelsController.js');
+    require('wheelsService.js');
+
+  }]);
 
 })();
 
