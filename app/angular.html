@@ -1,0 +1,36 @@
+<html ng-app="listaTelefonica">
+<head>
+    <title>Lista Telefonica</title>
+    <script src="lib/angular/angular.js"></script>
+    <script>
+        angular.module("listaTelefonica", []);
+        angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope) {
+            $scope.app = "Lista Telefônica";
+            $scope.contatos = [
+                {nome: "Pedro", telefone: "996659869"},
+                {nome: "Luiz", telefone: "995569987"},
+                {nome: "Maria", telefone:"844459966"}
+            ];
+        });
+        
+    </script>
+    
+</head>
+<body ng-controller="listaTelefonicaCtrl">
+    <div>
+        <h4>{{app}}</h4>
+        <table>
+            <tr>
+               <th>Nome</th> 
+               <th>Telefone</th>
+            </tr>
+            <tr ng-repeat="contato in contatos">
+                <th>{{contato.nome}}</th>
+                <th>{{contato.telefone}}</th>
+
+            </tr>
+        </table>
+        
+    </div>
+</body>
+</html>

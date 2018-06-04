@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
+    <title>Grid</title>
+    <script src="lib/angular/angular.js"></script>
+
+</head>
+
+<body ng-controller="app">
+    <div>
+        <nav class="navbar navbar-dark bg-dark">
+
+            <div class="row col-sm-5 offset-sm-7">
+                <div class="form-group col-sm-4">
+                    <input placeholder="Login">
+                </div>
+                <div class="form-group col-sm-5">
+                    <input placeholder="Senha">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-default">Login</button>
+                </div>
+            </div>
+
+        </nav>
+        {{app}}
+  
+
+
+        <div class="form-group">
+            <div class="col-sm-5 offset-sm-8">
+                <form>
+                    <h6 class="col-sm-7">Pesquisar JogoDeRodas</h6>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <input class="form-control form-control-sm" placeholder="Palavra-chave">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <select class="form-control form-control-sm">
+                                <option>Estado</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <select class="form-control form-control-sm">
+                                <option>Cidade</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <select class="form-control form-control-sm" ng-change="selectBrand" ng-model="" ng-options="">
+                                <option>Marca</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <select class="form-control form-control-sm">
+                                <option>Tipo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <select class="form-control form-control-sm">
+                                <option>Condição</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-4">
+                            <select class="form-control form-control-sm">
+                                <option>Diâmetro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-sm-2">
+                            <select class="form-control form-control-sm">
+                                <option>Preço Min</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-2">
+                            <select class="form-control form-control-sm">
+                                <option>Preço Max</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
