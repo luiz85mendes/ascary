@@ -28,9 +28,10 @@
                             </select>
                         </div>
                     </div>
+                    
                     <div class="row">
                         <div class="form-group col-sm-4">
-                            <select class="form-control form-control-sm" ng-options="wheel in wheels" ng-model="wheels">
+                            <select class="form-control form-control-sm" ng-options="brand as brand.marca for brand in brands track by brand.marca" ng-model="selected">
                                 <option>Tipo</option>
                             </select>
                         </div>

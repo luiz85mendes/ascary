@@ -9,6 +9,11 @@ asc.config(['$routeProvider', function ($routeProvider) {
 
 asc.run(['$rootScope', function ($rootScope) {
     $rootScope.wheels = [ "OEM", "Replics", "Classics"];
+    $rootScope.brands = [
+      { marca: 'OZ'},
+      { marca: 'BBS'},
+      { marca: 'TSW'}
+    ];
     console.log('Lista de rodas!');
 }]);
 
@@ -17,8 +22,19 @@ asc.controller('listController', function($scope) {
 });
 
 asc.controller('searchController', function ($scope) {
-    console.log('Search controller ativo');
+  $scope.items = [{
+    id: 1,
+    label: 'aLabel',
+    subItem: { name: 'aSubItem' }
+  }, {
+    id: 2,
+    label: 'bLabel',
+    subItem: { name: 'bSubItem' }
+  }];
 });
+
+
+
 
 asc.controller('editController', function ($scope, $location, $routeParams) {
   $scope.title = "editar roda";
