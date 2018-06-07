@@ -1,4 +1,4 @@
-(function() {
+// (function() {
 
     var wheelsResolve = {
         parametros : ['WheelsService', function (wheelsService) {
@@ -9,9 +9,11 @@
 
     }
 
-  
-    angular.module('app').controller('wheelsController', ['$scope', 'WheelsService', function($scope, wheelsService) {
-        $scope.titulo = "Teste2";
-    }]);
+ angular.module('asc').controller('wheelsController', ['$scope', function($scope) {
     
-})();
+}]);
+    // angular.module('app').controller('wheelsController', ['$scope', 'WheelsService', function($scope, wheelsService) {
+        
+    // }]);
+    
+// })();

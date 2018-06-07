@@ -12,6 +12,21 @@ app.run(['$rootScope', function ($rootScope) {
 
 }]);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 app.controller('listController', function ($scope) {
   console.log('listController');
 
