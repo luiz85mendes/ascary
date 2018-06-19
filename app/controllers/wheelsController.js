@@ -1,4 +1,4 @@
-// (function() {
+(function() {
 
     var wheelsResolve = {
         parametros : ['WheelsService', function (wheelsService) {
@@ -10,10 +10,10 @@
     }
 
  angular.module('asc').controller('wheelsController', ['$scope', function($scope) {
-    
+   console.log('eu aqui');
 }]);
     // angular.module('app').controller('wheelsController', ['$scope', 'WheelsService', function($scope, wheelsService) {
         
     // }]);
     
-// })();
+})();

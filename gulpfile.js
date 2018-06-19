@@ -40,6 +40,7 @@ gulp.task('watch', function () {
   gulp.watch(['./app/**/*.html'], ['html']);
   gulp.watch(['./app/**/*.js'], ['js']);
   gulp.watch(['./app/**/*.css'], ['css']);
+  gulp.watch(['./app/css/**/*.css'], ['css']);
 });
 
 gulp.task('default', ['connect', 'watch', 'index']);

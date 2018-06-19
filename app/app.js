@@ -2,15 +2,22 @@ var app = angular.module('app', ['ngRoute']);
 
 app.config(['$routeProvider', function ($routeProvider) {
   $routeProvider.
-    when('/', { controller: 'listController', templateUrl: 'list.html' }).
+    when('/', { controller: 'listController', templateUrl: 'search.html', resolve: { Lista: } }).
     when('/edit/:name', { controller: 'editController', templateUrl: 'form.html' }).
     when('/new', { controller: 'newController', templateUrl: 'form.html' }).otherwise({ redirectTo: '/' });
 }]);
+
+
 app.run(['$rootScope', function ($rootScope) {
   $rootScope.fruits = ["banana", "apple", "orange"]; //Variável fruits possui contexto global ao módulo.
   console.log('app.run');
 
+
 }]);
+
+app.controller('listController', function($scope) {
+  console.log('bateu aqui');
+});
 
 
 

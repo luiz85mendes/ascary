@@ -1,40 +1,42 @@
 <!DOCTYPE html>
-<html ng-app="asc">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
-    <title>Grid</title>
-    <!-- <script src="lib/angular/angular.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
-    <script src="asc.js"></script>
-
+    <title>Ascary Studio</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
 </head>
 
 <body>
-    <div>
-        <nav class="navbar navbar-dark bg-dark">
-
-            <div class="row col-sm-5 offset-sm-7">
-                <div class="form-group col-sm-4">
-                    <input placeholder="Login">
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col col-desktop-3">
+                   <img src="images/logo.png" alt="logo ascary">
                 </div>
-                <div class="form-group col-sm-5">
-                    <input placeholder="Senha">
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-default">Login</button>
+                <div class="col col-desktop-9">
+                    <nav>
+                        <ul>
+                            <li>Home</li>
+                            <li>Quem Somos</li>
+                            <li>Portfólio</li>
+                            <li>Contato</li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col col-desktop-12 title">
+                <h1>Encontre as rodas dos seus sonhos.</h1>
+            </div>
+        </div>
 
-        </nav>
-       
-  
-        <div ng-view></div>
-
+    </header>
+    <main>Principal</main>
+    <footer>Rodapé</footer>
 </body>
 
 </html>
