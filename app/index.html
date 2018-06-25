@@ -32,27 +32,40 @@
     <script src="lib/angular/angular-messages.js"></script>
     <script>
         angular.module("listaTelefonica", ["ngMessages"]);
-        angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope) {
+
+        angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function ($scope, $http) {
             $scope.app = "Lista Telefonica";
-            $scope.contatos = [
-                { nome: "Pedro", telefone: "9998888", data: new Date(), operadora: { nome: "Vivo", codigo: 14, categoria: "Celular" }, cor: "blue" },
-                { nome: "Ana", telefone: "9998877", data: new Date(), operadora: { nome: "Tim", codigo: 41, categoria: "Celular" },  cor: "yellow" },
-                { nome: "Maria", telefone: "9998866", data: new Date(), operadora: { nome: "Vivo", codigo: 14, categoria: "Celular" }, cor: "red" }
-            ];
-            $scope.operadoras = [
-                { nome: "Vivo", codigo: 14, categoria: "Celular" },
-                { nome: "Tim", codigo: 41, categoria: "Celular" },
-                { nome: "Vivo", codigo: 15, categoria: "Celular" },
-                { nome: "GVT", codigo: 25, categoria: "Fixo" },
-                { nome: "Embratel", codigo: 21, categoria: "Fixo" },
-            ];
-
-            $scope.adicionarContato = function (contato) {
-                $scope.contatos.push(angular.copy(contato));
-                delete $scope.contato;
-                $scope.contatoForm.$setPristine();
-
+            $scope.contatos = [];
+            $scope.parametros = [];
+            $scope.operadoras = [];
+            
+            var carregarContatos = function () {
+                $http.get("http://localhost:8082/contatos").then(function (response) {
+                    $scope.contatos = response.data;
+                }).catch(function (response) {
+                    $scope.message = "Aconteceu um problema: " + reponse.data;
+                });
             };
+            
+            var carregarOperadoras = function () {
+                 $http.get('http://localhost:8082/contatos').then(function (response) {
+                     $scope.operadoras = response.data;
+                 });
+            };
+
+
+        
+            
+            
+
+            // $scope.adicionarContato = function (contato) {
+            //     //$scope.contatos.push(angular.copy(contato));
+            //     $http.post("http://localhost:8082/contato", contato).then(function (response) {
+            //         delete $scope.contato;
+            //         $scope.contatoForm.$setPristine();
+            //     });
+               
+            // };
 
             $scope.apagarContatos = function (contatos) {
                 $scope.contatos = contatos.filter(function (contato) {
@@ -68,6 +81,11 @@
                 console.log(isContatoSelecionado);
             };
 
+            $scope.ordenarPor = function (campo) {
+                $scope.criterioDeOrdenacao = campo;
+            };
+            carregarContatos();
+            carregarOperadoras();
         });
 
     </script>
@@ -76,16 +94,17 @@
 <body ng-controller="listaTelefonicaCtrl">
     <div class="jumbotron">
         <h3>{{app}}</h3>
+        {{message}}
         <input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?"/>
         <table class="table">
             <tr>
                 <th></th>
-                <th>Nome</th>
-                <th>Telefone</th>
+                <th><a href="" ng-click="ordenarPor('nome')">Nome</a></th>
+                <th><a href="" ng-click="ordenarPor('telefone')">Telefone</a></th>
                 <th>Operadora</th>
                 <th>Data</th>
             </tr>
-            <tr ng-class="{'selecionado negrito': contato.selecionado}" ng-repeat="contato in contatos | filter:criterioDeBusca | orderBy:'nome'">
+            <tr ng-class="{'selecionado negrito': contato.selecionado}" ng-repeat="contato in contatos | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:true">
                 <td>
                     <input type="checkbox" ng-model="contato.selecionado" />
                 </td>
@@ -104,7 +123,7 @@
         <form name="contatoForm">
             <input class="form-control" type="text" ng-model="contato.nome" name="nome" placeholder="Nome" ng-required="true" ng-minlength="3"/>
             <input class="form-control" type="text" ng-model="contato.telefone" name="telefone" placeholder="Telefone" ng-required="true"
-                ng-pattern="/^\d{4,5}-\d{4}$/" />
+                ng-pattern="/^\d{4,5}-\d{4}$/"/>
             <select class="form-control" ng-model="contato.operadora" ng-options="operadora.nome for operadora in operadoras">
                 <option value="">Selecione uma operadora</option>
             </select>
