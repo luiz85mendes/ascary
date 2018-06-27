@@ -18,5 +18,6 @@ var contatos = [
 http.createServer(function (req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.write(JSON.stringify(contatos));
+    res.write(JSON.stringify(operadoras));
     res.end();
 }).listen(8082);
