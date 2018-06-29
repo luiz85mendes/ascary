@@ -1,15 +1,35 @@
-var app = angular.module('myapp', ['ngRoute']);
+var myapp = angular.module('myapp', ['ngRoute']);
 
-// Definindo Rotas
-app.config(function($routeProvider) {
-  $routeProvider.when("/users/:id", {
-      template:"<h1>Hello {{name}} </h1>",
-      controller: "UserController"
+myapp.config(function ($routeProvider) {
+    $routeProvider
+    .when('/', {
+       templateUrl: "pages/home.html",
+       controller: "HomeController"  
     })
-    .otherwise({redirectTo: '/'});
+    .when('/about', {
+        templateUrl: "pages/about.html",
+        controller: "AboutController"                 
+    })
+    .when('/contact', {
+        templateUrl: "pages/contact.html",
+        controller: "ContactController"
+    })
+
 });
 
-app.controller('UserController', function ($scope, $routeParams) {
-    $scope.name = $routeParams.id;
-    //console.log($scope.name);
+myapp.controller('HomeController', function ($scope) {
+    $scope.message = "Home";
 });
+
+myapp.controller('AboutController', function ($scope) {
+    $scope.message = "About";
+});
+
+myapp.controller('ContactController', function ($scope) {
+    $scope.message = "Contact";
+});
+
+
+// myapp.controller('UserController', function ($scope, $routeParams) {
+//     $scope.name = parseInt($routeParams.id) + parseInt($routeParams.valor);
+// });
