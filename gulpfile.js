@@ -7,6 +7,7 @@ var inject = require('gulp-inject');
 
 gulp.task('index', function () {
   var target = gulp.src('app/index.html');
+  
 
   var source = gulp.src(['app/src/**/*.js', 'app/src/**/*.css'], {read: false});
 

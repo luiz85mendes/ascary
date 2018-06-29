@@ -1,14 +1,22 @@
 {
   "name": "ascary",
   "version": "1.0.0",
-  "description": "",
+  "description": "teste",
   "main": "index.js",
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.7",
+    "angular": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "angular-ui-router": "^0.4.2",
     "gulp": "^3.9.1"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/username/repository.git"
   },
   "author": "",
   "license": "ISC"

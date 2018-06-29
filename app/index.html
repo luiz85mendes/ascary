@@ -1,50 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en" ng-app="myapp">
 <head>
-    <meta charset="UTF-8">
-    <title>Ascary Studio</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/grid.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>ngRoute</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/angular-route/angular-route.min.js"></script>
+  <script src="myapp.js"></script>  
 </head>
-
 <body>
-    <header id="header">
-        <nav class="nav">
-            <div class="row">
-                <div class="col col-desktop-2 logo">
-                    <img src="images/logo.png" alt="logo ascary">
-                </div>
-                <div id="main-menu" class="col col-desktop-9">
-                    
-                    <ul>
-                        <li class="hasSub">WHEELS</li>
-                        <li class="hasSub">ICONFIGURATOR</li>
-                        <li class="hasSub">OPTIONS</li>
-                        <li class="hasSub">DEALER</li>
-                        <li class="hasSub">GALLERY</li>
-                        <li class="hasSub">CATALOG</li>
-                        <li class="hasSub">BLOG</li>
-                        <li class="hasSub">STORE</li>
-                        <li class="hasSub">CONTACT</li>
-                        <li class="hasSub">CAREERS</li>
-                    </ul>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">ngRoute</a>
+      </div>
+      <div>
+        <ul class="nav navbar-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+{{name}}
+  <ng-view>
 
-                </div>
-            </div>
-        </nav>
+  </ng-view>
 
-        </div>
-        <div class="row">
-            <div class="col col-desktop-12 title">
-                <h1>Encontre rodas incríveis.</h1>
-            </div>
-        </div>
-
-    </header>
-    <main>Principal</main>
-    <footer>Rodapé</footer>
 </body>
-
 </html>
