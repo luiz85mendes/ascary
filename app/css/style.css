@@ -64,10 +64,10 @@ body {
     height: 600px;
 }
 
-.sessions {
+/* .sessions {
     width: 100%;
     position: absolute;
-}
+} */
 /* 
 #header nav {
     text-align: right;
@@ -96,6 +96,23 @@ body {
 #searchbox {
     position: relative;
 }
+
+#sessions {
+    
+}
+
+#sessions img {
+    padding: 15px;
+    display: inline-block;
+    position: relative;
+    align-content: center;
+}
+
+main {
+    align-content: center;
+}
+
+
 /* button {
     position: inline;
     float: right;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" ng-app="app">
 
 <head>
     <meta charset="UTF-8">
@@ -8,9 +8,9 @@
     <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
-    <script>
-
-    </script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="app.js"></script>
 </head>
 
 <body>
@@ -60,10 +60,11 @@
 
     </header>
     <main>
-        <div class="sessions">
+        <div class="col col-desktop-12" ui-view></div>
+        <!-- <div class="sessions">
             <img src="" alt="sessions">
             <img src="" alt="sessions">
-        </div>
+        </div> -->
     </main>
     <footer>Rodapé
     </footer>

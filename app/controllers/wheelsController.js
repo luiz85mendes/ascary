@@ -10,7 +10,8 @@
     }
 
  angular.module('asc').controller('wheelsController', ['$scope', function($scope) {
-   console.log('eu aqui');
+     $scope.message = 'teste';
+   
 }]);
     // angular.module('app').controller('wheelsController', ['$scope', 'WheelsService', function($scope, wheelsService) {
         
