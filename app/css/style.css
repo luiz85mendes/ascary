@@ -98,7 +98,8 @@ body {
 }
 
 #sessions {
-    
+    width: 89%;
+    margin: auto;
 }
 
 #sessions img {
