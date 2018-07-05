@@ -32,11 +32,13 @@ body {
     font-size: calc(2.4vw + 9px) !important;
 }
 
+
 #main-menu {
     float: right;
     margin-top: 25px;
     color: #aaaaaa;
     font-size: 15px;
+    padding: 14px;
  
 }
 
@@ -86,3 +88,17 @@ body {
     transform: translate(0, -30%);
 
 }
+
+#search {
+    position: relative;
+}
+
+#searchbox {
+    position: relative;
+}
+/* button {
+    position: inline;
+    float: right;
+    
+} */
+
