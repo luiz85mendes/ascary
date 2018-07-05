@@ -1,32 +1,78 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myapp">
+<html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <title>ngRoute</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <script src="lib/angular/angular.min.js"></script>
-  <script src="lib/angular-route/angular-route.min.js"></script>
-  <script src="myapp.js"></script>  
+    <meta charset="UTF-8">
+    <title>Ascary Studio</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <script>
+        var site = {
+            name: 'ascary',
+            since: '2006',
+            propietary: 'Luiz Mendes'
+        }
+
+    //    alert(
+    //        "Site " + site.name + 
+    //        "Since: " + site.since +
+    //        "Propietary: " + site.propietary
+
+    //     );
+    </script>
 </head>
+
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">ngRoute</a>
-      </div>
-      <div>
-        <ul class="nav navbar-nav">
-          <li><a href="#/home">Home</a></li>
-          <li><a href="#/about">Sobre</a></li>
-          <li><a href="#/contact">Contato</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <header id="header">
+        <nav class="nav">
+            <div class="row">
+                <div class="col col-desktop-2 logo">
+                    <img src="images/logo.png" alt="logo ascary">
+                </div>
+                <div id="main-menu" class="col col-desktop-9">
 
-  <ng-view>
+                    <ul>
+                        <li class="hasSub">Cadastre-se</li>
+                        <li class="hasSub">Torne-se um parceiro</li>
+                        <li class="hasSub">Fórum</li>
+                        <li class="hasSub">Entrar</li>
+                        <li class="hasSub">Contato</li>
+                    </ul>
 
-  </ng-view>
+                </div>
+            </div>
+        </nav>
 
+        </div>
+        <div class="row">
+            <div class="col col-desktop-12 title">
+                <div class="form-group col-sm-8 offset-sm-2">
+                    <form>
+                        <h1 class="home-title">Encontre rodas e acessórios premium</h1>
+                        <input class="form-control" placeholder="Experimente 'Rodas Porsche Fuchs'">
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="container" id="searchbox-container">
+            <form class="form-control" id="searchbox">
+                <input name="search" type="text">
+            </form>
+        </div> -->
+
+
+    </header>
+    <main>
+        <div class="sessions">
+            <img src="" alt="sessions">
+        </div>
+    </main>
+    <footer>Rodapé
+    </footer>
 </body>
+
 </html>

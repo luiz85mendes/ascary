@@ -28,7 +28,9 @@ body {
    box-sizing: border-box;
 }
 
-home-wrap
+.home-title {
+    font-size: calc(2.4vw + 9px) !important;
+}
 
 #main-menu {
     float: right;
@@ -39,8 +41,9 @@ home-wrap
 }
 
 #main-menu .hasSub {
+    position: center;
     font-family: 'Lato', sans-serif;
-    position: relative;
+    padding: 10px;
     display: inline;
     
 }
