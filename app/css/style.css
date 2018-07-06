@@ -14,7 +14,7 @@ body {
 }
 
 .nav {
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.8);
     width: 100%;
     min-height: 100px;
     position: fixed;
@@ -109,14 +109,70 @@ body {
     align-content: center;
 }
 
-main {
-    align-content: center;
+#ui-view {
+    background: #ffffff;
 }
 
 
-/* button {
-    position: inline;
-    float: right;
-    
+footer {
+    background: #000;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+#footer-top {
+    text-align: center;
+    max-width: 870px;
+    margin: 25px auto 25px;
+    background: #000;
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-size: 185%;
+    font-family: 'Lato', sans-serif;
+}
+
+#footer-top h3 {
+    display: inline;
+}
+
+#footer-top ul.social {
+    display: inline;
+    text-align: center;
+}
+
+#footer-top ul.social li {
+    display: inline-block;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+#footer-bottom {
+    background: #666;
+    text-align-last: center;
+    font-size: 75%;
+}
+
+#icon {
+    content: "\f09a";
+}
+
+.fa {
+    display: inline-block;
+    text-rendering: auto;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ul {
+    list-style-type:none;
 } */
 
+.wrapper {
+    margin: 0 auto;
+    display: block;
+}

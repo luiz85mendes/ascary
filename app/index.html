@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Ascary Studio</title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -40,7 +41,8 @@
                     <h1 class="home-title">Encontre rodas incríveis</h1>
                     <form id="searchbox">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Experimente: 'Rodas Porsche Fuchs'" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control" placeholder="Experimente: 'Rodas Porsche Fuchs'" aria-label="Recipient's username"
+                                aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-dark" type="button">Buscar</button>
                             </div>
@@ -60,13 +62,40 @@
 
     </header>
     <main>
-        <div class="col col-desktop-12" ui-view></div>
-        <!-- <div class="sessions">
-            <img src="" alt="sessions">
-            <img src="" alt="sessions">
-        </div> -->
+        <div id="ui-view" class="col col-desktop-12" ui-view></div>
+
     </main>
-    <footer>Rodapé
+    <footer>
+        <div id="footer-top">
+            <div class="wrapper">
+                <h3>Siga-nos</h3>
+                <ul class="social">
+                    <li>
+                        <a target="_blank" href="https://www.ascary.com.br">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.ascary.com.br">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div id="footer-bottom">
+            O parceiro que anuncia nesta página é o único responsável pelas transações comerciais que realizar com usuários do web site
+            do Ascary. A comercialização do produto anunciado, bem como a garantia de sua legítima procedência, é de inteira
+            responsabilidade do anunciante, não sendo o Ascary responsável por quaisquer danos diretos e/ou causados a terceiros,
+            advindo da exibição dos anúncios em desacordo com o Código de Defesa do Consumidor e outras legislações aplicáveis
+            ao comércio e/ou prestação de serviços por parte do anunciante.
+            </br>
+            <strong>© 2018 Ascary. Todos os direitos reservados.</strong>
+        </div>
     </footer>
 </body>
 
