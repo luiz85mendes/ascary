@@ -10,6 +10,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
     <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-messages.js"></script>
     <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="app.js"></script>
 </head>
@@ -41,25 +42,19 @@
                     <h1 class="home-title">Encontre rodas incríveis</h1>
                     <form id="searchbox">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Experimente: 'Rodas Porsche Fuchs'" aria-label="Recipient's username"
+                            <input type="text" class="form-control" placeholder="Experimente: 'Rodas Porsche Fuchs'" ng-model="filtro" aria-label="Recipient's username"
                                 aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-dark" type="button">Buscar</button>
+                               <a><button class="btn btn-dark" type="button" data-ng-click="searchWheels(filtro)">Buscar</button></a>
                             </div>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>
-
-        <!-- <div class="container" id="searchbox-container">
-            <form class="form-control" id="searchbox">
-                <input name="search" type="text">
-            </form>
-        </div> -->
-
-
+        <div>
+               
+        </div>
     </header>
     <main>
         <div id="ui-view" class="col col-desktop-12" ui-view></div>
