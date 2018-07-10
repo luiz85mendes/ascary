@@ -1,4 +1,0 @@
-(function() {
-    
-    require('simpleController.js');
-})(); 

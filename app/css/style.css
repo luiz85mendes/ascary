@@ -45,7 +45,7 @@ body {
 #main-menu .hasSub {
     position: center;
     font-family: 'Lato', sans-serif;
-    padding: 10px;
+    padding: 8px;
     display: inline;
     
 }
@@ -55,7 +55,7 @@ body {
 #header {
     background: linear-gradient(
         rgba(0,0,0,.40),rgba(0,0,0,.3)
-      ), url("../images/car.jpg");
+      ), url("../images/car.jpg") fixed;
     padding-top: 30px;
     background-size: cover;
     color: #ffffff;
