@@ -1,9 +1,14 @@
 <div>
   {{message}}
     <h3>Modelos</h3>
+    <select class="form-control" 
+    ng-model="selected" name="k_r" id="k_r" ng-options="parametro as parametro.brand for parametro in parametros track by parametro.id">
+    <option value=""></option>
+</select> 
     <div ng-repeat="parametro in parametros">
         <ul>
             <li>{{parametro.brand}}</li>
         </ul>
+        
     </div>
 </div>
