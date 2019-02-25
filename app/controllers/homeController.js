@@ -3,18 +3,19 @@
 
     angular.module('app').controller('HomeController', ['$scope', '$http',  '$state', '$stateParams', '$anchorScroll',  function ($scope, $http, $state, $stateParams, $anchorScroll) {
 
-      $scope.menu = "Buscar";
-      $scope.parametros = [];
+    $scope.menu = "Buscar";
+    
         
-        $http.get('http://localhost:8080/wheels/buscar').then(function (response) {
+        $http.get('http://localhost:8080/wheels/carregar').then(function (response) {
             $scope.parametros = response.data;
-            console.log($scope.parametros);
+            
            
         });
 
-        $scope.searchWheels = function () {
-            $http.get('http://localhost:8080/wheels/buscar').then(function (response) {
-                $scope.para = response.data;
+        $scope.searchWheels = function (filtro) {
+            $http.get('http://localhost:8080/wheels/buscar/' + filtro).then(function (response) {
+                $scope.lista = response.data;
+                console.log($scope.lista);
                
             });
         }

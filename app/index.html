@@ -17,14 +17,12 @@
 
 <body ng-controller="HomeController">
     <header id="header" class="page-home">
-
         <nav class="nav">
             <div class="row">
                 <div class="col col-desktop-2 logo">
                     <img src="images/logo.png" alt="logo ascary">
                 </div>
                 <div id="main-menu" class="col col-desktop-12">
-
                     <ul>
                         <li class="hasSub">
                             <a href="#home">Home</a>
@@ -35,7 +33,6 @@
                         <li class="hasSub">Entrar</li>
                         <li class="hasSub">Contato</li>
                     </ul>
-
                 </div>
             </div>
         </nav>
@@ -54,12 +51,24 @@
                             </div>
                         </div>
                         <div class="form-group col-sm-4">
+                                <table>
+                                        <thead>
+                                            <th>Nome</th>
+                                        </thead>
+                                        <tbody ng-repeat="lista in lista">
+                                            <td>{{lista.name}}</td>
+                                        </tbody>
+                                    </table>
+                        </div>
+                        <div class="form-group col-sm-4">
                             <label>Marca</label>
-                          {{principal}}
+                        
                           <select class="form-control" 
-                          ng-model="selected" name="k_r" id="k_r" ng-options="parametro as parametro.brand for parametro in parametros track by parametro.id">
-                          <option value=""></option>
-                      </select> 
+                            ng-model="selected" 
+                            name="k_r" id="k_r" 
+                            ng-options="parametro as parametro.brand for parametro in parametros track by parametro.id">
+                            <option value="">- Selecione -</option>
+                          </select> 
                         </div>
                     </form>
                 </div>
